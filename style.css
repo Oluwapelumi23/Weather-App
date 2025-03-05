@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Kosugi+Maru&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-image: url(./weather-pic2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-container {
+  width: 70%;
+  height: auto;
+  text-align: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.content h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  letter-spacing: 0.8rem;
+  font-weight: 700;
+}
+
+.content p {
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+}
+
+.content {
+  margin: 1rem 0;
+}
+
+.location-date h1 {
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 40%;
+  height: auto;
+  padding: 0.5rem 0.5rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  background-color: rgba(211, 211, 211, 0.63);
+  border-radius: 0.5rem;
+}
+
+input:focus {
+  border: 1px solid black;
+}
+
+button {
+  width: fit-content;
+  height: auto;
+  color: #fff;
+  background-color: black;
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.bottom-content {
+  width: 50%;
+  height: auto;
+  margin: 1rem auto;
+  color: #fff;
+  background-color: black;
+  padding: 1rem;
+  visibility: hidden;
+  border-radius: 0.5rem;
+}
+
+.bottom-content-visible {
+  width: 50%;
+  height: auto;
+  margin: 2rem auto;
+  color: #fff;
+  background-color: black;
+  padding: 1rem;
+  visibility: visible;
+  border-radius: 0.5rem;
+}
+
+.location-date h1,
+.location-date p {
+  text-align: justify;
+}
+
+.celcius h1 {
+  font-size: 4rem;
+}
+
+.h-w-p {
+  text-align: justify;
+}
+
+.h-w-p h2 {
+  margin: 1rem 0;
+}
+
+.h-w-p-card {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1rem;
+}
+
+.humidity,
+.wind,
+.pressure {
+  border: 1px solid rgba(0, 0, 255, 0.4);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  row-gap: 0.5rem;
+}
+
+.error {
+  width: 40%;
+  height: auto;
+  background-color: rgb(105, 3, 3);
+  color: #fff;
+  margin: 1rem auto;
+  border-radius: 0.4rem;
+  padding: 0.3rem 1rem;
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    width: 100%;
+    height: auto;
+    background-image: url(./weather-pic2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .main-container {
+    width: 90%;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    margin: 2rem auto;
+  }
+
+  input {
+    width: 40%;
+    height: auto;
+    padding: 0.5rem 0.5rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    background-color: rgba(211, 211, 211, 0.63);
+    border-radius: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  input {
+    width: 50%;
+    height: auto;
+    padding: 0.5rem 0.5rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    background-color: rgba(211, 211, 211, 0.63);
+    border-radius: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    width: 100%;
+    height: auto;
+    background-image: url(./weather-pic2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .main-container {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    margin: 2rem auto;
+  }
+  .content h1 {
+    color: #fff;
+    font-size: 1.8rem;
+    letter-spacing: 0.8rem;
+    font-weight: 700;
+  }
+
+  .content p {
+    color: #fff;
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+  }
+
+  input {
+    width: 50%;
+    height: auto;
+    padding: 0.5rem 0.5rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    background-color: rgba(211, 211, 211, 0.63);
+    border-radius: 0.5rem;
+  }
+
+  .bottom-content-visible {
+    width: 60%;
+    height: auto;
+    margin: 2rem auto;
+    color: #fff;
+    background-color: black;
+    padding: 1rem;
+    visibility: visible;
+    border-radius: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+    height: auto;
+    background-image: url(./weather-pic2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .main-container {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    margin: 2rem auto;
+  }
+
+  .content h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.8rem;
+    font-weight: 700;
+  }
+
+  .content p {
+    color: #fff;
+    font-size: 0.6rem;
+    letter-spacing: 0.2rem;
+  }
+
+  input {
+    width: 50%;
+    height: auto;
+    padding: 0.5rem 0.5rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    background-color: rgba(211, 211, 211, 0.63);
+    border-radius: 0.5rem;
+  }
+
+  .bottom-content-visible {
+    width: 75%;
+    height: auto;
+    margin: 2rem auto;
+    color: #fff;
+    background-color: black;
+    padding: 1rem;
+    visibility: visible;
+    border-radius: 0.5rem;
+  }
+
+  .h-w-p-card {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+
+  button {
+    border: 1px solid rgba(0, 0, 255, 0.4);
+  }
+}
