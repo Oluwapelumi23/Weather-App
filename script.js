@@ -9,7 +9,6 @@ let pressureRT = document.getElementById("pressure");
 let description = document.getElementById("description");
 let error = document.getElementById("error");
 let bottomContent = document.getElementById("bottom-content");
-let bottomContentVI = document.getElementById("bottom-content-visible");
 let weatherImage = document.getElementById("weather-image");
 
 button.addEventListener("click", async function (event) {
@@ -31,7 +30,7 @@ button.addEventListener("click", async function (event) {
       const pressureData = weather.main.pressure;
       const cloudCover = weather.clouds.all;
       const weatherDescription = weather.weather[0].description.toLowerCase();
-      const convertTemp = Math.random(temperature - 273.15).toFixed(2);
+      const convertTemp = Math.round(temperature - 273.15);
 
       tempData.textContent = `${convertTemp}°C`;
       humidity.textContent = `${humidityData}%`;
@@ -44,12 +43,6 @@ button.addEventListener("click", async function (event) {
       bottomContent.classList.remove("bottom-content");
       bottomContent.classList.add("bottom-content-visible");
       error.style.display = "none";
-
-      setTimeout(() => {
-        bottomContentVI.style.opacity = "1";
-        bottomContentVI.style.transform = "translateY(0)";
-      }, 10);
-
       let todayDate = new Date().toLocaleDateString("en-US", {
         weekday: "short",
         month: "short",
